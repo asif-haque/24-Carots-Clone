@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: orange;
+}
+
+.welcome-img {
+  border-top-left-radius: 250px; /* Adjust this value for the roundness of the corner */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
