@@ -2,23 +2,30 @@ import React, { useState } from "react";
 import "./navbar.css";
 
 export default function navbar() {
+  const [show, setShow] = useState(true);
   const [showAbout, setShowAbout] = useState(false);
   const [showServices, setShowServices] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
   const [clicked, setClicked] = useState(false);
   document.onscroll = () => {
     if (window.scrollY > window.innerHeight / 2) {
-      document.querySelector("nav").classList.remove("show");
-      document.querySelector("nav").classList.add("hide");
+      setShow(false);
+      // document.querySelector("nav").classList.remove("show");
+      // document.querySelector("nav").classList.add("hide");
     } else {
-      document.querySelector("nav").classList.remove("hide");
-      document.querySelector("nav").classList.add("show");
+      setShow(true);
+      // document.querySelector("nav").classList.remove("hide");
+      // document.querySelector("nav").classList.add("show");
     }
   };
   return (
     <>
       <div className="hidden lg:block">
-        <nav className="show fixed z-10 w-full bg-white py-10 lg:flex justify-center gap-10 text-center tracking-widest text-sm">
+        <nav
+          className={`${
+            show ? `show` : `hide`
+          } fixed z-10 w-full bg-white py-10 lg:flex justify-center gap-10 text-center tracking-widest text-sm`}
+        >
           <div className="space-x-10 flex">
             <div
               className="relative"
