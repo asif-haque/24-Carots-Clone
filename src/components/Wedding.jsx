@@ -7,7 +7,7 @@ export default function Wedding() {
         <h1 className="text-green-900 font-serif text-5xl px-10">
           Making Every Experience Magical
         </h1>
-        <div className="w-[45%] h-80 rounded-full overflow-hidden mx-auto my-10">
+        <div className="w-[45%] h-96 rounded-full overflow-hidden mx-auto my-10">
           <img
             src="https://24carrots.com/wp-content/uploads/2023/08/wedding-scroll-cropped.jpg"
             alt=""
