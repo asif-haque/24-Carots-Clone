@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./backToTop.css";
 
 export default function BackToTop() {
   const [show, setShow] = useState(false);
@@ -7,14 +8,14 @@ export default function BackToTop() {
       setShow(true);
     } else setShow(false);
   };
-  return show ? (
-    <div className="fixed bottom-0 left-1/2 [transform:translate(-50%,0)]">
+  return (
+    <div className={`${show ? `showTop` : `hideTop`} fixed bottom-0 left-1/2`}>
       <a
-        href="#hero"
-        className="bg-emerald-600 px-3 lg:px-5 py-1 rounded-t-3xl text-white"
+        href="#"
+        className="bg-green-900 px-3 lg:px-5 py-2 rounded-t-3xl text-white text-sm"
       >
         BACK TO TOP
       </a>
     </div>
-  ) : null;
+  );
 }

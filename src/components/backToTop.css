@@ -1,0 +1,9 @@
+.showTop {
+  transform: translate(-50%, 0);
+  transition: all 1s;
+}
+
+.hideTop {
+  transform: translate(-50%, 200%);
+  transition: all 1s;
+}
